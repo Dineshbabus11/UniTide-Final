@@ -1,0 +1,29 @@
+.register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    & .register-content{
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        & .register-btn{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            & p{
+                cursor: pointer;
+                transition: transform 0.3s ease,color 0.3s ease;
+                &:hover{
+                    color: #3d3d3d;
+                    transform: scale(1.02);
+                }
+            }
+        }
+    }
+}

@@ -5,6 +5,12 @@ import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import { PieChart } from 'react-minimal-pie-chart';
 import { Divider, Typography } from '@mui/material';
+import EventNoteIcon from '@mui/icons-material/EventNote';
+import CampaignIcon from '@mui/icons-material/Campaign';
+import SchoolIcon from '@mui/icons-material/School';
+import EventAvailableIcon from '@mui/icons-material/EventAvailable';
+import NewspaperIcon from '@mui/icons-material/Newspaper';
+import { Profile } from './Profile';
 
 export const Home = () => {
   return (
@@ -17,17 +23,24 @@ export const Home = () => {
               <h1>Welcome to Unitide</h1>
               <p>Your gateway to digital innovation – connecting alumni across the globe.</p>
             </div>
-
             <div className="slider">
               <h1>What We Offer</h1>
               <p>Events, job opportunities, alumni network, and more – all in one place.</p>
             </div>
-
             <div className="slider">
               <h1>Stay Connected</h1>
               <p>Join a growing community of achievers. Inspire and be inspired.</p>
             </div>
           </Slide>
+        </div>
+
+        <div className="home-main">
+          <div className="main-card">
+            <Profile />
+          </div>
+          <div className="main-card directory-card">
+            <p>Alumni Directory</p>
+          </div>
         </div>
 
         <div className="home-updates">
@@ -55,21 +68,21 @@ export const Home = () => {
               Recent Updates
             </Typography>
             <ul>
-              <li>🗓️ Alumni Meetup 2025 – Register Now</li>
-              <li>📢 New Job Postings in Tech & Finance</li>
-              <li>🎓 2024 Batch Graduation Ceremony Recap</li>
+              <li><EventNoteIcon /> Alumni Meetup 2025 – Register Now</li>
+              <li><CampaignIcon /> New Job Postings in Tech & Finance</li>
+              <li><SchoolIcon /> 2024 Batch Graduation Ceremony Recap</li>
             </ul>
           </div>
         </div>
 
         <div className="home-nav">
           <div className="nav">
-            <h3>📅 Upcoming Events</h3>
+            <h3><EventAvailableIcon /> Upcoming Events</h3>
             <p>3 new events</p>
           </div>
 
           <div className="nav">
-            <h3>📰 Latest News</h3>
+            <h3><NewspaperIcon /> Latest News</h3>
             <p>4 announcements</p>
           </div>
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Login.scss';
 import { FormHeader } from '../header/FormHeader';
 import TextField from '@mui/material/TextField';
-import { Button, Typography } from '@mui/material';
+import { Button, Typography, Snackbar, Alert } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 export const Login = () => {
@@ -13,6 +13,8 @@ export const Login = () => {
     password: '',
   });
 
+  const [errorOpen, setErrorOpen] = useState(false); // Snackbar state
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -22,8 +24,17 @@ export const Login = () => {
   };
 
   const handleLogin = () => {
-    console.log('Login Data:', formData);
-    navigate('/');
+    if (formData.email === 'mail@gmail.com' && formData.password === '12345678') {
+      console.log('Login Data:', formData);
+      navigate('/');
+    } else {
+      setErrorOpen(true);
+    }
+  };
+
+  const handleCloseSnackbar = (event, reason) => {
+    if (reason === 'clickaway') return;
+    setErrorOpen(false);
   };
 
   return (
@@ -75,6 +86,18 @@ export const Login = () => {
           </form>
         </div>
       </div>
+
+      {/* Snackbar Alert */}
+      <Snackbar
+        open={errorOpen}
+        autoHideDuration={3000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      >
+        <Alert onClose={handleCloseSnackbar} severity="error" sx={{ width: '100%' }}>
+          Invalid email or password. Please try again.
+        </Alert>
+      </Snackbar>
     </>
   );
 };

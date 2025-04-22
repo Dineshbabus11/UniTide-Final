@@ -40,7 +40,7 @@ export const Profile = () => {
             onClick={handleClickOpen}
             className="view-profile-button"
             startIcon={<Avatar sx={{ width: 24, height: 24, bgcolor: '#00e676' }} />}
-            sx={{color:'black',fontFamily:'poppins',fontSize:'1.1rem'}}
+            sx={{ color: 'black', fontFamily: 'poppins', fontSize: '1.1rem' }}
           >
             View Profile
           </Button>
@@ -80,31 +80,32 @@ export const Profile = () => {
         <Box sx={{ p: 4, maxWidth: 700, mx: 'auto' }}>
           <Paper elevation={3} sx={{ p: 3, borderRadius: 4 }}>
             <Grid container spacing={3}>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12}>
                 <Typography variant="subtitle2" color="textSecondary">Full Name</Typography>
                 <Typography variant="body1">Dinesh Babu S</Typography>
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12}>
                 <Typography variant="subtitle2" color="textSecondary">Email</Typography>
                 <Typography variant="body1">mail@gmail.com</Typography>
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12}>
                 <Typography variant="subtitle2" color="textSecondary">Graduation Year</Typography>
                 <Typography variant="body1">2026</Typography>
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12}>
                 <Typography variant="subtitle2" color="textSecondary">Department</Typography>
                 <Typography variant="body1">Information Technology</Typography>
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12}>
                 <Typography variant="subtitle2" color="textSecondary">Contact</Typography>
                 <Typography variant="body1">+91 9876543210</Typography>
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12}>
                 <Typography variant="subtitle2" color="textSecondary">Current Company</Typography>
                 <Typography variant="body1">ABC Private Limited</Typography>
               </Grid>
             </Grid>
+
           </Paper>
         </Box>
       </Dialog>

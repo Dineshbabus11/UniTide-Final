@@ -11,8 +11,10 @@ import SchoolIcon from '@mui/icons-material/School';
 import EventAvailableIcon from '@mui/icons-material/EventAvailable';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
 import { Profile } from './Profile';
+import { useNavigate } from 'react-router-dom';
 
 export const Home = () => {
+  const navigate=useNavigate();
   return (
     <>
       <Header />
@@ -38,7 +40,7 @@ export const Home = () => {
           <div className="main-card">
             <Profile />
           </div>
-          <div className="main-card directory-card">
+          <div className="main-card directory-card" onClick={()=>navigate('/directory')}>
             <p>Alumni Directory</p>
           </div>
         </div>

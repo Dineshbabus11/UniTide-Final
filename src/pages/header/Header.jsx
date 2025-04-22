@@ -6,14 +6,29 @@ import { useNavigate } from 'react-router-dom';
 export const Header = () => {
   const navigate = useNavigate();
 
-  const navItems = ['Home', 'Contact', 'FAQ', 'Gallery'];
+  const navItems = [{
+    btn:'Home',
+    nav:'/'
+  },
+  {
+    btn:'Contact',
+    nav:'/contact'
+  },
+  {
+    btn:'FAQ',
+    nav:'/faq'
+  },
+  {
+    btn:'Gallery',
+    nav:'/gallery'
+  }];
 
   return (
     <header>
       <h2 onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>UniTide<span>.</span></h2>
       <div className="header-right">
         {navItems.map((item, index) => (
-          <p key={index}>{item}</p>
+          <p key={index} onClick={()=>navigate(item.nav)}>{item.btn}</p>
         ))}
         <Avatar
           src="/broken-image.jpg"

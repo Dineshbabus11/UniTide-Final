@@ -13,7 +13,7 @@ export const Login = () => {
     password: '',
   });
 
-  const [errorOpen, setErrorOpen] = useState(false); // Snackbar state
+  const [errorOpen, setErrorOpen] = useState(false); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;

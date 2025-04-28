@@ -8,6 +8,7 @@ import { Directory } from './pages/directory/Directory'
 import { Contact } from './pages/contact/Contact'
 import { Faq } from './pages/faq/Faq'
 import { Gallery } from './pages/gallery/Gallery'
+import { Events } from './pages/events/Events'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/faq' element={<Faq/>}/>
         <Route path='/gallery' element={<Gallery/>}/>
+        <Route path='/events' element={<Events/>}/>
       </Routes>
       </BrowserRouter>
     </>

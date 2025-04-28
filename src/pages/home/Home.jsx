@@ -78,7 +78,7 @@ export const Home = () => {
         </div>
 
         <div className="home-nav">
-          <div className="nav">
+          <div className="nav" >
             <h3><EventAvailableIcon /> Upcoming Events</h3>
             <p>3 new events</p>
           </div>
